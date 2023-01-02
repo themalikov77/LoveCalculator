@@ -7,7 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.lovecalculator.databinding.FragmentResultLoveBinding
 
-class ResultLove : Fragment() {
+class
+ResultLoveFragment : Fragment() {
     private lateinit var binding: FragmentResultLoveBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,8 +25,9 @@ class ResultLove : Fragment() {
     }
 
     private fun initUi() {
-        binding.resultMe.text = arguments?.getString("sname")
+
+       binding.resultMe.text = arguments?.getString("sname")
         binding.resultYou.text = arguments?.getString("fname")
-        binding.tvResult.text = arguments?.getString("percentage")
+       binding.tvResult.text = arguments?.getString("percentage")
     }
 }

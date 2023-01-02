@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loveCalculator"
-        android:name="com.example.lovecalculator.LoveCalculator"
+        android:name="com.example.lovecalculator.LoveCalculatorFragment"
         android:label="fragment_love_calculator"
         tools:layout="@layout/fragment_love_calculator" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/resultLove"
-        android:name="com.example.lovecalculator.ResultLove"
+        android:name="com.example.lovecalculator.ResultLoveFragment"
         android:label="fragment_result_love"
         tools:layout="@layout/fragment_result_love" />
 </navigation>
