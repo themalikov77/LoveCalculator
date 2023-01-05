@@ -7,16 +7,25 @@
 
     <fragment
         android:id="@+id/loveCalculator"
-        android:name="com.example.lovecalculator.LoveCalculatorFragment"
+        android:name="com.example.lovecalculator.loveCalculator.LoveCalculatorFragment"
         android:label="fragment_love_calculator"
         tools:layout="@layout/fragment_love_calculator" >
-        <action
-            android:id="@+id/action_loveCalculator_to_resultLove2"
-            app:destination="@id/resultLove" />
+
     </fragment>
     <fragment
         android:id="@+id/resultLove"
-        android:name="com.example.lovecalculator.ResultLoveFragment"
+        android:name="com.example.lovecalculator.resultLove.ResultLoveFragment"
         android:label="fragment_result_love"
         tools:layout="@layout/fragment_result_love" />
+    <fragment
+        android:id="@+id/onBoardingFragment"
+        android:name="com.example.lovecalculator.onBoard.OnBoardingFragment"
+        android:label="fragment_on_boarding"
+        tools:layout="@layout/fragment_on_boarding" >
+
+        <action
+            android:id="@+id/action_onBoardingFragment_to_loveCalculator"
+            app:destination="@id/loveCalculator" />
+    </fragment>
+
 </navigation>

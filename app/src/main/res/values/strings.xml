@@ -13,4 +13,6 @@
     <string name="history">History</string>
     <string name="your_score">Your Score</string>
     <string name="_0">0</string>
+    <string name="enter_boy_name">Enter boy name:</string>
+    <string name="enter_girl_name">Enter girl name:</string>
 </resources>

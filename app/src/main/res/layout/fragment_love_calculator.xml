@@ -4,14 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoveCalculatorFragment">
+    android:background="@drawable/img"
+    tools:context=".loveCalculator.LoveCalculatorFragment">
 
-    <ImageView
+    <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/img_love"
         android:layout_width="wrap_content"
-        android:layout_height="250dp"
-        android:background="@drawable/img_love"
-        android:contentDescription="@string/todo"
+        android:layout_height="350dp"
+        app:lottie_rawRes="@raw/birds"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -24,7 +26,7 @@
         android:text="@string/love_calculator"
         android:textColor="@color/blue"
         android:textSize="32sp"
-        android:textStyle="bold"
+        android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/img_love" />
@@ -34,6 +36,7 @@
         android:layout_height="wrap_content"
         android:text="@string/first_name"
         android:textColor="@color/black"
+        android:textStyle="italic"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@id/et_first_name"
         app:layout_constraintStart_toStartOf="@id/et_first_name"/>
@@ -43,10 +46,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
+        android:textStyle="italic"
         android:textColorHint="@color/black"
         android:layout_marginHorizontal="16dp"
         android:background="@drawable/corner"
-        android:hint="@string/you"
+        android:hint="@string/enter_boy_name"
         android:padding="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +73,7 @@
         android:layout_marginHorizontal="16dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/corner"
-        android:hint="@string/me"
+        android:hint="@string/enter_girl_name"
         android:padding="16dp"
         app:layout_constraintTop_toBottomOf="@id/tv_second_name"
          />
@@ -85,7 +89,7 @@
         app:cornerRadius="100dp"
         android:backgroundTint="@color/blue"
         android:text="@string/calculate"
-        android:textColor="@color/black"/>
+        android:textColor="@color/white"/>
 
     <TextView
         android:id="@+id/tv_home"
@@ -93,7 +97,7 @@
         android:layout_height="wrap_content"
         android:text="@string/home"
         android:textSize="16sp"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         android:layout_margin="12dp"/>
@@ -110,7 +114,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/history"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
