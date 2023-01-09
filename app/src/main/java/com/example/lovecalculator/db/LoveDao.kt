@@ -13,7 +13,7 @@ import javax.inject.Singleton
 interface LoveDao  {
 
     @Query
-        ("SELECT*FROM lovemodel ORDER BY firsName,secondName DESC")
+        ("SELECT*FROM lovemodel ORDER BY firsName,secondName ASC")
     fun getAllLove(): LiveData<List<LoveModel>>
 
     @Insert
