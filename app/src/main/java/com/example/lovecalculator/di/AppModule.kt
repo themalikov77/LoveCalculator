@@ -1,21 +1,23 @@
 package com.example.lovecalculator.di
 
+
 import android.content.Context
-import android.content.Context.MODE_PRIVATE
-import android.content.SharedPreferences
-import com.example.lovecalculator.data.Pref
+import com.example.lovecalculator.App
+import com.example.lovecalculator.data.local.Pref
+import com.example.lovecalculator.db.AppDatabase
+import com.example.lovecalculator.db.LoveDao
 import com.example.lovecalculator.remote.LoveApi
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
+import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class AppModule () {
+class AppModule() {
 
     @Provides
     fun provideApp(): LoveApi {
@@ -23,10 +25,19 @@ class AppModule () {
             .addConverterFactory(GsonConverterFactory.create()).build().create(LoveApi::class.java)
 
     }
-@Provides
-fun providePref():Pref{
-    return Pref()
-}
 
+    @Provides
+    fun providePref(@ApplicationContext context: Context): Pref {
+        return Pref(context)
+    }
+    @Provides
+    fun provideRoom(@ApplicationContext context: Context) : AppDatabase{
+        return App.appDataBase
+    }
+     @Provides
+     fun getDao(appDatabase: AppDatabase): LoveDao {
+         return appDatabase.getDao()
+
+     }
 }
 

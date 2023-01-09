@@ -12,4 +12,5 @@
     <color name="grey">#434343</color>
     <color name="blue">#05C3F3</color>
     <color name="btn">#0000</color>
+    <color name="transparent"> #0000ffff</color>
 </resources>

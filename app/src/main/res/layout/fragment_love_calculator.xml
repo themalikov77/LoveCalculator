@@ -121,6 +121,7 @@
         android:layout_margin="12dp"/>
 
     <ImageView
+        android:id="@+id/image_history"
         android:src="@drawable/bottom_history"
         android:layout_width="32dp"
         android:layout_height="32dp"

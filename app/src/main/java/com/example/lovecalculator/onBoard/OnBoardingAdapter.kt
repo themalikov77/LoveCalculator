@@ -8,9 +8,10 @@ import com.example.lovecalculator.R
 import com.example.lovecalculator.databinding.ItemOnBoardingBinding
 import com.example.lovecalculator.data.model.OnBoard
 
-class OnBoardingAdapter(val onClick:()-> Unit) :
+class OnBoardingAdapter(val onClick: () -> Unit) :
     RecyclerView.Adapter<OnBoardingAdapter.OnBoardingViewHolder>() {
-    private val arrayList = arrayListOf<OnBoard>(
+
+    private val arrayList = arrayListOf(
         OnBoard(R.raw.wedding, "Любовь это...", "Сладостный запах ее духов"),
         OnBoard(
             R.raw.wedding,
@@ -58,10 +59,10 @@ class OnBoardingAdapter(val onClick:()-> Unit) :
             binding.tvDESC.text = onBoard.desc
 
             binding.skip.setOnClickListener {
-                onClick
+                onClick()
             }
             binding.btnStart.setOnClickListener {
-                onClick
+                onClick()
             }
 
             if (adapterPosition == 0) {
@@ -75,7 +76,7 @@ class OnBoardingAdapter(val onClick:()-> Unit) :
                 binding.btnBack.isVisible = false
             }
             if (adapterPosition == 1) {
-//                binding.image.setAnimation(R.raw.data)
+               // binding.image.setAnimation(R.raw.data)
                 binding.ind1.setImageResource(R.drawable.unselected)
                 binding.ind2.setImageResource(R.drawable.selected)
                 binding.ind3.setImageResource(R.drawable.unselected)

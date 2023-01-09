@@ -1,15 +1,12 @@
-package com.example.lovecalculator.data
+package com.example.lovecalculator.data.local
 
 import android.content.Context
 import android.content.Context.MODE_PRIVATE
 import android.content.SharedPreferences
 
-class Pref {
-    private lateinit var pref: SharedPreferences
 
-    fun addPref(context: Context) {
-        pref = context.getSharedPreferences("pref_name", MODE_PRIVATE)
-    }
+class Pref(context: Context){
+    private val pref: SharedPreferences = context.getSharedPreferences("pref_name", MODE_PRIVATE)
 
     fun isBoardingShow(): Boolean {
         return pref.getBoolean(BOARDING_SHOW, false)
